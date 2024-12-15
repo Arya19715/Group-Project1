@@ -1,0 +1,865 @@
+/* Stle reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  @font-face {
+    font-family: "Roboto";
+    src: url(../assets/Roboto-Regular.ttf);
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  img:hover, .full-name:hover, .user-name:hover {
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* Main Containers */
+  .main-flex-container {
+    max-width: 1350px;
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+  .left-flex-container {
+    flex: 1 0 22%;
+    height: 100%;
+    position: sticky;
+    top: 0;
+    background:#fff; 
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid rgb(230, 236, 240);
+  }
+  .center-flex-container {
+   flex: 3 0 45%;
+   background:#fff;
+  }
+  .right-flex-container {
+    flex: 2 0 31%;
+    height: 100%;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background:#fff;
+    border-left: 1px solid rgb(230, 236, 240);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  
+  /* Left Navigation */
+  .logo i{
+    color: #39e75f;
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .logo i:hover {
+    border-radius: 50%;
+    padding: 1rem;
+  }
+  
+  .nav-links a {
+    font-weight: 750;
+    color: rgba(20, 23, 26, 0.93);
+    padding: 10px 15px;
+  }
+  
+  .current-page a { color: #39e75f}
+  
+  .nav-links a:hover {
+    background: rgba(29, 161, 242, 0.1);
+    color: #39e75f;
+    padding: 10px 15px;
+    border-radius: 25px;
+  }
+  .nav-items {
+    margin: 1.2rem 2rem;
+    white-space: nowrap;
+  }
+  .nav-links i {
+    padding-right: 0.5rem;
+  }
+  .nav-links {
+    margin-top: -1rem;
+  }
+  
+  .tweet a {
+    margin-top: 300px;
+    display: block;
+    width: 100%;
+    color: #fff;
+    background: #39e75f;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 10px 5rem;
+    border-radius: 25px;
+  }
+  
+  .tweet a:hover {
+    color: #fff;
+    background: #39e75f;
+  }
+  
+  .profile-box {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20rem;
+    align-self: center;
+    padding: 0 0.6rem;
+  }
+  .profile-box:hover {
+    background: rgba(29, 161, 242, 0.1);
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  
+  .profile-box img {
+    display: block;
+    width: 45px;
+    height: 45px;
+    margin: auto;
+    border-radius: 100%;
+    margin-right: 0.5rem;
+  }
+  
+  .profile-box .full-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  
+  .profile-box .options-icon {
+    color: #39393a;
+    margin-left: 1rem;
+  }
+  
+  .user-name {
+    color: #39393a;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.1rem;
+  }
+  
+  /* Main Container */
+  .home {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    border-bottom: 1px solid rgb(230, 236, 240);
+    color: #39393a;
+    padding: 0.5rem 1rem;
+  }
+  
+  /* home panel */
+  .home h1 {
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
+  .home i {
+    font-size: 1.4rem;
+    color: #39e75f;
+    background: #fff;
+    padding: 0.5rem;
+    border-radius: 50%
+  }
+  .home i:hover {
+    background: rgba(29, 161, 242, 0.1);
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  /* Create Tweet box */
+  
+  .form-group-2 {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.8rem;
+  }
+  
+  .post-icons {
+    padding-left: 4rem;
+    color: #39e75f;
+  }
+  .post-icons i {
+    padding-right: 10px;
+    font-size: 1.4rem;
+  }
+  .post-icons i:hover {
+    color: #39e75f;
+    cursor: pointer;
+  }
+  
+  
+  
+  /* comment */
+  .tweets1 img {
+    display: block;
+    width: 100%;
+  }
+  .tweets1 .user-pics1 img {
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 0.5rem 1rem;
+  }
+  .tweets1 {
+    display: flex;
+    flex-flow: row;
+    font-size: 15px;
+    margin-left: 10px;
+    width: 100%;
+    line-height: 1.75rem;
+    padding-top: 0.5rem;
+    border-top: 2px solid rgb(230, 236, 240)
+  }
+  .tweets1:hover {
+    background: rgb(245, 248, 250);
+  }
+  
+  .user-content-box1 {
+    display: flex;
+    flex-flow: column nowrap;
+    color: rgb(20, 23, 26);
+  }
+  
+  .user-content-box1 .user-names1 {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  img:hover, .full-name:hover, .user-name:hover {
+    cursor: pointer;
+  }
+  .time1 {
+    color: rgb(101, 119, 134);
+  }
+  /* reply */
+  
+  .tweets2 img {
+    display: block;
+    width: 100%;
+  }
+  .tweets2 .user-pics2 img {
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 0.5rem 1rem;
+  }
+  
+  
+  .tweets2 {
+    display: flex;
+    flex-flow: row;
+    font-size: 15px;
+    margin-left: 50px;
+    width: 100%;
+    line-height: 1.75rem;
+    padding-top: 0.5rem;
+  
+  }
+  .tweets2:hover {
+    background: rgb(245, 248, 250);
+  }
+  
+  .user-content-box2 {
+    display: flex;
+    flex-flow: column nowrap;
+    color: rgb(20, 23, 26);
+  }
+  
+  .user-content-box2 .user-names2 {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  img:hover, .full-name2:hover, .user-name2:hover {
+    cursor: pointer;
+  }
+  .time2 {
+    color: rgb(101, 119, 134);
+  }
+  
+  
+  
+  /* User Content */
+  .tweets img {
+    display: block;
+    width: 100%;
+  }
+  .tweets .user-pics img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0.5rem 1rem;
+  }
+  .tweets {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    font-size: 15px;
+    width: 100%;
+    line-height: 1.75rem;
+    padding-top: 0.5rem;
+    border-top: 20px solid rgb(230, 236, 240);
+  
+  }
+  .tweets:hover {
+    background: rgb(245, 248, 250);
+  }
+  .full-name:hover {
+    text-decoration: underline;
+  }
+  .user-content img {
+    border-radius: 20px;
+  }
+  .user-content {
+    font-family: "Roboto";
+    padding-right: 1rem;
+    color: rgb(48, 52, 56);
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  .user-content a {
+    color: rgb(27, 149, 224);
+  }
+  
+  .user-content-box {
+    display: flex;
+    flex-flow: column nowrap;
+    color: rgb(20, 23, 26);
+  }
+  
+  .user-content-box .user-names {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  .user-names .full-name {
+    padding-right: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgb(20, 23, 26);
+  }
+  .user-names .user-name {
+    padding-right: 10px;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: rgb(101, 119, 134);
+  }
+  .time {
+    color: rgb(101, 119, 134);
+  }
+  .user-names i {
+    padding-top: 0.6rem;
+    margin-left: 50%;
+    color: rgb(101, 119, 134);
+  
+  }
+  .content-icons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem 4rem 1rem 0;
+  }
+  .profile-link a{
+    color: black;
+  }
+  .content-icons i.kana {
+    color: red; 
+  }
+  
+  .content-icons i {
+    color: rgb(101, 119, 134); 
+    font-size: 1rem;
+  }
+  
+  .content-icons i:last-child {
+    font-size: 14px;
+  }
+  
+  .content-icons .blue:hover {
+    color: rgba(29, 161, 242, 1.00);
+  }
+  
+  .content-icons .green:hover {
+    color: rgb(23, 191, 99);
+  }
+  
+  .content-icons .red:hover {
+    color: rgb(224, 36, 94);
+  }
+  
+  .content-icons .blue:hover {
+    color: rgba(29, 161, 242, 1.00);
+  }
+  
+  .red {
+    color: red;
+  }
+  
+  /* Right Navbar */
+  .search-box {
+    border: none;
+    border-radius: 25px;
+    padding: 0.1rem 1rem;
+    background: rgb(230, 236, 240);
+    margin-top: 0.5rem;
+    white-space: nowrap;
+  }
+  .search-box i {
+    color: rgb(101, 119, 134);
+    font-size: 0.9rem;
+  }
+  .search-box input {
+    padding: 0.8rem 8rem 0.8rem 0.2rem;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    font-size: 0.9rem;
+    background: rgb(230, 236, 240);
+  }
+  
+  /* Trending Nav Items */
+  .nav-list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    border-bottom: 10px solid rgb(230, 236, 240);
+    color: black;
+  }
+  .nav-list:hover {
+    background: rgba(0, 0, 0, 0.03);
+  }
+  .nav-list a {
+    color: black;
+  }
+  .nav-list:last-child {
+    font-size: 1rem;
+    border-bottom: none;
+  }
+  .trend-list {
+    display: flex;
+    flex-flow: column nowrap;
+    
+  }
+  
+  .trends {
+    border-top: 50px solid #39e75f;
+    background: rgb(245, 248, 250);
+    display: flex;
+    flex-flow: column nowrap;
+    width: 80%;
+    border-radius: 15px;
+    margin-top: 1rem;
+  }
+  .trends .header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid rgb(230, 236, 240);
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid rgb(230, 236, 240);
+  }
+  
+  .header h2 {
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
+  
+  .header i {
+    color: #39e75f;
+    background: rgb(245, 248, 250);
+    padding: 0.5rem;
+    border-radius: 50%
+  }
+  .header i:hover {
+    background: rgba(29, 161, 242, 0.1);
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  
+  
+  .nav-list .trend-icon {
+    font-size: 13px;
+    color:  rgb(101, 119, 134);
+  }
+  
+  .right-footer {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 0.5rem;
+  }
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  .footer-links i {
+      padding: 0.4rem;
+      border-radius: 50%;
+  }
+  .footer-links i:hover {
+      background: rgb(245, 248, 250);
+      padding: 0.4rem;
+      border-radius: 50%;
+      cursor: pointer;
+  }
+  
+  .footer-copyright {
+    align-self: flex-start;
+  }
+  
+  
+  
+  
+  
+  .full-name h1:hover {
+    text-decoration: underline;
+  }
+  .user-name  {
+    font-size: 17px;
+    color: rgb(101, 119, 134);
+  }
+  .follow-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid rgb(230, 236, 240);
+    border-top: 10px solid rgb(230, 236, 240);
+  }
+  
+  .follow-header i {
+    font-size: 13px;
+    align-self: center;
+    cursor: pointer;
+  }
+  .user-profile img {
+    display: inline-block;
+    margin-right: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-self: center; 
+  }
+  
+  
+  .user-profile {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  .user-profile-content {
+    width: 100%;
+    padding-bottom: 0.3rem;
+  }
+  
+  
+  .pagnation {
+    margin: 1rem 0;
+    text-align: center;
+  }
+  .pagnation a {
+    color: #fff;
+    background: #39e75f;
+    padding: 0.3rem 1rem;
+    border-radius: 25px;
+    font-size: 1rem;
+  }
+  .pagnation a:hover {
+    background: #39e75f;
+  }
+  
+  .profile {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(45deg, #ff6f61, #ffb6a1);
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Profile container background and style */
+.profile-container {
+    width: 100%;
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.95); /* Slight transparency for the container */
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    transition: transform 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.profile-container:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+}
+
+.header h1 {
+    color: #ff6f61;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.edit-btn {
+    padding: 12px 24px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover {
+    background-color: #d14c3f;
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.profile-header img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-right: 30px;
+    transition: transform 0.3s ease;
+}
+
+.profile-header img:hover {
+    transform: scale(1.05);
+}
+
+.profile-header .info {
+    color: #333;
+}
+
+.profile-header .info h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.profile-header .info p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.profile-header .info .location,
+.profile-header .info .website {
+    font-size: 16px;
+    color: #777;
+}
+
+/* About Me Section */
+.about-me {
+    background-color: #fff0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.about-me h3 {
+    color: #ff6f61;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.about-me p {
+    color: #555;
+    font-size: 18px;
+}
+
+/* Social Links Styling */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin-right: 20px;
+    color: #ff6f61;
+    font-size: 26px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #d14c3f;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.testimonials h3 {
+    color: #ff6f61;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.testimonial {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Contact Form Section */
+.contact-form {
+    background-color: #ffe0e0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.contact-form h3 {
+    color: #ff6f61;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ff6f61;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    padding: 12px 25px;
+    background-color: #ff6f61;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #d14c3f;
+}
+
+/* Follow Button Styling */
+.follow-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #ff6f61;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.follow-btn:hover {
+    background-color: #d14c3f;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 20px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-header img {
+        margin-bottom: 15px;
+    }
+
+    .social-links {
+        margin-top: 10px;
+    }
+
+    .gallery img {
+        width: 48%;
+        margin-right: 4%;
+    }
+
+    .contact-form {
+        padding: 15px;
+    }
+}
